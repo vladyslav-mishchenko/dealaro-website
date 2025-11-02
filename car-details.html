@@ -54,6 +54,9 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body class="theme-red">
@@ -70,9 +73,43 @@ Mobile Menu
     <div class="as-menu-wrapper">
         <div class="as-menu-area text-center">
             <button class="as-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo.svg" alt="Dealaro" /></a>
+
+            <div class="m-menu-top">
+                <div class="m-menu-top-collumns">
+                    <div class="c1">
+                        <a href="index.html">
+                            <img class="mlogo" src="assets/img/logo.svg" alt="Dealaro" />
+                        </a>
+                    </div>
+
+                    <div class="c2">
+                        <div class="languages">
+                            <select id="languageSelect" class="nice-select">
+                                <option value="en" selected="">EN</option>
+                                <option value="fr">FR</option>
+                                <option value="de">DE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="search">
+                <form action="" method="POST" class="m-vin-search-form">
+                    <div class="m-vin-search-collumns">
+                        <div class="c1">
+                            <input placeholder="VIN" type="text" />
+                        </div>
+
+                        <div class="c2">
+                            <button type="submit" class="submit-btn">
+                                <i class="fa-regular fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <div class="as-mobile-menu">
                 <ul>
                     <li>
@@ -90,7 +127,7 @@ Mobile Menu
                     <li class="menu-item-has-children">
                         <a href="#">PAGES</a>
                         <ul class="sub-menu">
-                            <li><a href="blog.html">Login</a></li>
+                            <li><a href="login.html">Login</a></li>
                             <li><a href="signup.html">Sign Up</a></li>
                             <li><a href="404.html">404 Error</a></li>
                             <li><a href="terms-conditions.html">Terms & Conditions</a></li>
@@ -132,17 +169,6 @@ Header Area
                         <div class="header-links">
                             <ul>
                                 <li>
-                                    <div class="">
-                                        <div class="languages">
-                                            <select id="languageSelect" class="nice-select">
-                                                <option value="en" selected>EN</option>
-                                                <option value="fr">FR</option>
-                                                <option value="de">DE</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
                                     <i class="far fa-user"></i>
                                     <a href="login.html">Login</a>
                                     <i class="fa-sharp fa-solid fa-slash-forward me-1 ms-1 text-white"></i><a
@@ -165,6 +191,7 @@ Header Area
                                 <a href="index.html"><img src="assets/img/logo.svg" alt="Dealaro" /></a>
                             </div>
                         </div>
+
                         <div class="col-auto me-xl-auto">
                             <div class="menu-area">
                                 <nav class="main-menu d-none d-lg-inline-block">
@@ -214,12 +241,27 @@ Header Area
                                 </button>
                             </div>
                         </div>
+
                         <div class="col-auto d-none d-lg-block">
-                            <div class="header-button">
-                                <button type="button" class="icon-btn bg-none searchBoxToggler">
-                                    <i class="fa-regular fa-magnifying-glass"></i>
-                                </button>
-                            </div>
+                            <ul class="heaer-items">
+                                <li>
+                                    <div class="header-button">
+                                        <button type="button" class="icon-btn bg-none searchBoxToggler">
+                                            <i class="fa-regular fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="languages">
+                                        <select id="languageSelect" class="nice-select">
+                                            <option value="en" selected>EN</option>
+                                            <option value="fr">FR</option>
+                                            <option value="de">DE</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -230,12 +272,11 @@ Header Area
     Breadcumb
 ============================== -->
     <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcrumb-bg.png" data-overlay="title" data-opacity="7">
-        <!-- bg animated image/ -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="breadcumb-content">
-                        <h1 class="breadcumb-title">Shop Details</h1>
+                        <h2 class="breadcumb-title">Shop Details</h2>
                         <ul class="breadcumb-menu">
                             <li>
                                 <a href="https://html.themeholy.com/dealaro/demo/home-child-care.html">Home</a>
@@ -258,18 +299,44 @@ Header Area
 ==============================-->
     <section class="product-details space">
         <div class="container">
-            <div class="row gx-60">
+            <div class="row">
                 <div class="col-lg-6">
-                    <div class="product-big-img">
-                        <div class="img">
-                            <img src="assets/img/product/car-details-1.jpg" alt="Product Image" />
+                    <div class="car-gallery">
+                        <div class="slider-for">
+                            <div><img src="assets/img/cars/car-1.jpg" alt="car 1" /></div>
+                            <div><img src="assets/img/cars/car-2.jpg" alt="car 2" /></div>
+                            <div><img src="assets/img/cars/car-3.jpg" alt="car 3" /></div>
+                            <div><img src="assets/img/cars/car-4.jpg" alt="car 4" /></div>
+                            <div><img src="assets/img/cars/car-5.jpg" alt="car 1" /></div>
+                            <div><img src="assets/img/cars/car-6.jpg" alt="car 2" /></div>
+                            <div><img src="assets/img/cars/car-7.jpg" alt="car 3" /></div>
+                            <div><img src="assets/img/cars/car-8.jpg" alt="car 4" /></div>
+                            <div><img src="assets/img/cars/car-9.jpg" alt="car 3" /></div>
+                            <div><img src="assets/img/cars/car-10.jpg" alt="car 4" /></div>
+                        </div>
+
+                        <div class="slider-nav">
+                            <div><img src="assets/img/cars/car-1.jpg" alt="car 1" /></div>
+                            <div><img src="assets/img/cars/car-2.jpg" alt="car 2" /></div>
+                            <div><img src="assets/img/cars/car-3.jpg" alt="car 3" /></div>
+                            <div><img src="assets/img/cars/car-4.jpg" alt="car 4" /></div>
+                            <div><img src="assets/img/cars/car-5.jpg" alt="car 1" /></div>
+                            <div><img src="assets/img/cars/car-6.jpg" alt="car 2" /></div>
+                            <div><img src="assets/img/cars/car-7.jpg" alt="car 3" /></div>
+                            <div><img src="assets/img/cars/car-8.jpg" alt="car 4" /></div>
+                            <div><img src="assets/img/cars/car-9.jpg" alt="car 3" /></div>
+                            <div><img src="assets/img/cars/car-10.jpg" alt="car 4" /></div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6">
                     <div class="product-about">
                         <p class="price">$125.00</p>
-                        <h2 class="product-title">Hyundai Accent Limited</h2>
+                        <h1 class="product-title">
+                            Hyundai Accent Limited
+                            <span class="vin">4S3BL616X86201130</span>
+                        </h1>
                         <p class="text">
                             Syndicate customized growth strategies prospective human capital
                             leverage other's optimal e-markets without transparent catalysts for
@@ -296,15 +363,141 @@ Header Area
                 </div>
             </div>
 
-            <div><!-- table --></div>
+            <div>
+                <div class="car-table">
+                    <h4 class="mb-20">Car Specification</h4>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Make</h6>
+                            <span>HONDA</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Model</h6>
+                            <span>CR-V</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Series</h6>
+                            <span>LX</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Year</h6>
+                            <span>2008</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">VIN (mask)</h6>
+                            <span>JHLRE38388C******</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Stock #</h6>
+                            <span>43296264</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Odometer</h6>
+                            <span>228,498 mi (Not Required/Exempt)</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Engine</h6>
+                            <span>2.4L I-4 DOHC, VVT, 166HP</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Cylinders</h6>
+                            <span>4 Cyl</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Fuel</h6>
+                            <span>Gasoline</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Transmission</h6>
+                            <span>Automatic</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Drive</h6>
+                            <span>FWD</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Body Style</h6>
+                            <span>UTILITY</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Exterior Color</h6>
+                            <span>BLUE</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Primary Damage</h6>
+                            <span>Right Rear</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Secondary Damage</h6>
+                            <span>—</span>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6 col-md-8 mb-20">
+                            <h6 class="mb-1">Title / Sale Doc</h6>
+                            <span>REPOSSESSION PAPERWORK (Georgia)</span>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6 col-md-8 mb-20">
+                            <h6 class="mb-1">Loss</h6>
+                            <span>Other (Repossession)</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Starts</h6>
+                            <span>Starts / Run &amp; Drive</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Keys</h6>
+                            <span>Present (FOB: Present)</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Airbags</h6>
+                            <span>Intact</span>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6 col-md-8 mb-20">
+                            <h6 class="mb-1">Location</h6>
+                            <span>2200 Trade Drive, Macon, GA 31217</span>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-md-4 mb-20">
+                            <h6 class="mb-1">Actual Cash Value</h6>
+                            <span>$3,125 USD</span>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6 col-md-8 mb-20">
+                            <h6 class="mb-1">Seller</h6>
+                            <span>Insurance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--==============================
         Related Product  
         ==============================-->
-            <div class="space-top theme-red">
+            <div class="theme-red">
                 <div class="title-area text-center">
                     <h2 class="sec-title">Related Products</h2>
                 </div>
+
                 <div class="row as-carousel product-slider g-0" data-slide-show="4" data-lg-slide-show="3"
                     data-md-slide-show="2" data-sm-slide-show="2" data-xs-slide-show="1" data-arrows="true"
                     data-xl-arrows="true" data-ml-arrows="true">

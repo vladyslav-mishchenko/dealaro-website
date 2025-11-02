@@ -23,7 +23,7 @@
 
 .nice-select .list {
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #ddd;
 }
 
@@ -31,7 +31,133 @@
   padding: 10px 15px;
 }
 
-.nice-select .option:hover {
+.nice-select .option:hover {}
 
-}
 /* end nice-select */
+
+/* mobile search */
+.m-vin-search-collumns {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+}
+
+.m-vin-search-collumns>.c1 {
+  flex-grow: 1;
+}
+
+.m-vin-search-collumns>.c2 {
+  width: 50px;
+}
+
+.m-vin-search-form input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  border-right: none;
+  padding: 0 7px;
+  font-size: 14px;
+}
+
+.m-vin-search-form button {
+  display: block;
+  width: 100%;
+  height: 35px;
+  border: none;
+  background-color: #f02801;
+  border-radius: 0 5px 5px 0;
+}
+
+.m-vin-search-form .submit-btn>i {
+  color: #ffffff;
+}
+
+/* end mobile search */
+
+.m-menu-top {
+  padding: 30px 0 40px;
+}
+
+.m-menu-top .mlogo {
+  width: 150px;
+  height: auto;
+}
+
+.m-menu-top-collumns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.m-menu-top-collumns>.c1 {
+  background-color: #f02801;
+  padding: 5px;
+}
+
+.m-menu-top-collumns>.c2 {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* header items */
+.heaer-items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+/* end header items */
+
+/* car gallery */
+.slider-for {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slider-for img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slider-nav img {
+  width: 100px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.slider-nav .slick-current img {
+  opacity: 1;
+  border: 2px solid #333;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+/* end car gallery */
+
+.car-table {
+  margin: 25px 0;
+}
+
+.login-page {
+  padding: 50px 0;
+}
+
+@media (max-width: 991px) {
+  .car-gallery {
+    padding-bottom: 50px;
+  }
+}

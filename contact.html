@@ -70,9 +70,43 @@ Mobile Menu
     <div class="as-menu-wrapper">
         <div class="as-menu-area text-center">
             <button class="as-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo.svg" alt="Dealaro" /></a>
+
+            <div class="m-menu-top">
+                <div class="m-menu-top-collumns">
+                    <div class="c1">
+                        <a href="index.html">
+                            <img class="mlogo" src="assets/img/logo.svg" alt="Dealaro" />
+                        </a>
+                    </div>
+
+                    <div class="c2">
+                        <div class="languages">
+                            <select id="languageSelect" class="nice-select">
+                                <option value="en" selected="">EN</option>
+                                <option value="fr">FR</option>
+                                <option value="de">DE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="search">
+                <form action="" method="POST" class="m-vin-search-form">
+                    <div class="m-vin-search-collumns">
+                        <div class="c1">
+                            <input placeholder="VIN" type="text" />
+                        </div>
+
+                        <div class="c2">
+                            <button type="submit" class="submit-btn">
+                                <i class="fa-regular fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <div class="as-mobile-menu">
                 <ul>
                     <li>
@@ -90,7 +124,7 @@ Mobile Menu
                     <li class="menu-item-has-children">
                         <a href="#">PAGES</a>
                         <ul class="sub-menu">
-                            <li><a href="blog.html">Login</a></li>
+                            <li><a href="login.html">Login</a></li>
                             <li><a href="signup.html">Sign Up</a></li>
                             <li><a href="404.html">404 Error</a></li>
                             <li><a href="terms-conditions.html">Terms & Conditions</a></li>
@@ -132,17 +166,6 @@ Header Area
                         <div class="header-links">
                             <ul>
                                 <li>
-                                    <div class="">
-                                        <div class="languages">
-                                            <select id="languageSelect" class="nice-select">
-                                                <option value="en" selected>EN</option>
-                                                <option value="fr">FR</option>
-                                                <option value="de">DE</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
                                     <i class="far fa-user"></i>
                                     <a href="login.html">Login</a>
                                     <i class="fa-sharp fa-solid fa-slash-forward me-1 ms-1 text-white"></i><a
@@ -165,6 +188,7 @@ Header Area
                                 <a href="index.html"><img src="assets/img/logo.svg" alt="Dealaro" /></a>
                             </div>
                         </div>
+
                         <div class="col-auto me-xl-auto">
                             <div class="menu-area">
                                 <nav class="main-menu d-none d-lg-inline-block">
@@ -214,12 +238,27 @@ Header Area
                                 </button>
                             </div>
                         </div>
+
                         <div class="col-auto d-none d-lg-block">
-                            <div class="header-button">
-                                <button type="button" class="icon-btn bg-none searchBoxToggler">
-                                    <i class="fa-regular fa-magnifying-glass"></i>
-                                </button>
-                            </div>
+                            <ul class="heaer-items">
+                                <li>
+                                    <div class="header-button">
+                                        <button type="button" class="icon-btn bg-none searchBoxToggler">
+                                            <i class="fa-regular fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="languages">
+                                        <select id="languageSelect" class="nice-select">
+                                            <option value="en" selected>EN</option>
+                                            <option value="fr">FR</option>
+                                            <option value="de">DE</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -235,7 +274,7 @@ Header Area
             <div class="row">
                 <div class="col-lg-8">
                     <div class="breadcumb-content">
-                        <h1 class="breadcumb-title">Contact Us</h1>
+                        <h2 class="breadcumb-title">Contact Us</h2>
                         <ul class="breadcumb-menu">
                             <li>
                                 <a href="index.html">Home</a>
